@@ -1,0 +1,11 @@
+/tp @p @e[type=cow,limit=1,sort=nearest]
+/locate biome plains
+/tp @s -723 88 485
+/tp @p @e[type=cow,limit=1,sort=nearest]
+/locate structure minecraft:village_plains
+/tp @s -2368 ~ 656
+/enchant @p minecraft:unbreaking 1
+/enchant @p minecraft:sharpness 5
+/enchant @p minecraft:knockback 2
+/mods
+/give @p zombieplayers:holy_strike_enchantment
