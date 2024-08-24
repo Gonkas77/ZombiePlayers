@@ -4,6 +4,7 @@ import me.gonkas.zombieplayers.ZombiePlayers;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.component.type.ItemEnchantmentsComponent;
 import net.minecraft.enchantment.Enchantment;
+import net.minecraft.enchantment.Enchantments;
 import net.minecraft.item.EnchantedBookItem;
 import net.minecraft.item.ItemGroups;
 import net.minecraft.registry.Registries;
@@ -56,15 +57,26 @@ public class HolyStrikeEnchantment {
         EnchantedBookItem holy_strike_4 = new EnchantedBookItem(settings);
         EnchantedBookItem holy_strike_5 = new EnchantedBookItem(settings);
 
-        EnchantedBookItem[] books = new EnchantedBookItem[]{holy_strike_1, holy_strike_2, holy_strike_3, holy_strike_4, holy_strike_5};
+        // making the books actually have the enchantment
+        enchantBookItem(holy_strike_1, 1);
+        enchantBookItem(holy_strike_2, 2);
+        enchantBookItem(holy_strike_3, 3);
+        enchantBookItem(holy_strike_4, 4);
+        enchantBookItem(holy_strike_5, 5);
 
-        for (int i=0; i<5; i++) {enchant(books[i], i);} // <------------------------------- note this may not work
-        for (EnchantedBookItem book : books) {register(book);}
-
-        return Registry.register(Registries.ITEM, Identifier.of(ZombiePlayers.MODID, "holy_strike_enchantment"), holy_strike_1);
+        // registering every item
+        HOLY_STRIKE_ENCHANTMENT_LEVEL_1 = registerEnchantment("holy_strike_enchantment_level_1", holy_strike_1);
+        HOLY_STRIKE_ENCHANTMENT_LEVEL_2 = registerEnchantment("holy_strike_enchantment_level_2", holy_strike_2);
+        HOLY_STRIKE_ENCHANTMENT_LEVEL_3 = registerEnchantment("holy_strike_enchantment_level_3", holy_strike_3);
+        HOLY_STRIKE_ENCHANTMENT_LEVEL_4 = registerEnchantment("holy_strike_enchantment_level_4", holy_strike_4);
+        HOLY_STRIKE_ENCHANTMENT_LEVEL_5 = registerEnchantment("holy_strike_enchantment_level_5", holy_strike_5);
     }
 
-    private static void enchant(EnchantedBookItem item, int level) {
+    private static EnchantedBookItem registerEnchantment(String name, EnchantedBookItem item) {
+        return Registry.register(Registries.ITEM, Identifier.of(ZombiePlayers.MODID, name), item);
+    }
+
+    private static void enchantBookItem(EnchantedBookItem item, int level) {
 
         ItemEnchantmentsComponent component = item.getDefaultStack().getEnchantments();
         ItemEnchantmentsComponent.Builder builder = new ItemEnchantmentsComponent.Builder(component);
@@ -74,5 +86,10 @@ public class HolyStrikeEnchantment {
 
     private static RegistryEntry<Enchantment> createEnchantment() {
 
+
+
+        Enchantment.Definition definition = new Enchantment.Definition(
+
+        )
     }
 }

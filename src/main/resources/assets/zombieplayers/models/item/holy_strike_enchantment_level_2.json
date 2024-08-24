@@ -1,0 +1,6 @@
+holy_strike_enchantment_level_1.json{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "minecraft:item/enchanted_book"
+  }
+}
