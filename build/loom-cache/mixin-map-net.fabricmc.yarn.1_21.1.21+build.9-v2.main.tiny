@@ -1,1 +1,2 @@
 v1	named	intermediary
+METHOD	me/gonkas/zombieplayers/mixin/ZombiePlayersMixin	(Lnet/minecraft/registry/Registerable;Lnet/minecraft/registry/RegistryKey;Lnet/minecraft/enchantment/Enchantment$Builder;)V	register	method_8235

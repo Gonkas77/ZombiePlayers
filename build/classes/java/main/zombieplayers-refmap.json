@@ -1,13 +1,13 @@
 {
   "mappings": {
-    "me/gonkas/zombieplayers/mixin/ExampleMixin": {
-      "loadWorld": "Lnet/minecraft/server/MinecraftServer;method_3735()V"
+    "me/gonkas/zombieplayers/mixin/ZombiePlayersMixin": {
+      "bootstrap": "Lnet/minecraft/class_1893;method_60184(Lnet/minecraft/class_7891;)V"
     }
   },
   "data": {
     "named:intermediary": {
-      "me/gonkas/zombieplayers/mixin/ExampleMixin": {
-        "loadWorld": "Lnet/minecraft/server/MinecraftServer;method_3735()V"
+      "me/gonkas/zombieplayers/mixin/ZombiePlayersMixin": {
+        "bootstrap": "Lnet/minecraft/class_1893;method_60184(Lnet/minecraft/class_7891;)V"
       }
     }
   }

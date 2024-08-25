@@ -9,3 +9,8 @@
 /enchant @p minecraft:knockback 2
 /mods
 /give @p zombieplayers:holy_strike_enchantment
+/give @p minecraft:diamond_sword{Echantments:[{"id":"holy_strike","level":"1"}]}
+/give @p minecraft:diamond_sword[minecraft:enchantments=
+/give @p minecraft:diamond_sword[minecraft:enchantments=[{"id":"holy_strike","level":1"}]]
+/give @p minecraft:diamond_sword[minecraft:enchantments={"id":"holy_strike","level":1"}]
+/give @p minecraft:diamond_sword[minecraft:enchantments={"id":"holy_strike","level":1"}]}
