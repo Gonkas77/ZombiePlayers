@@ -4,14 +4,10 @@ import me.gonkas.zombieplayers.ZombiePlayers;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.component.EnchantmentEffectComponentTypes;
 import net.minecraft.component.type.AttributeModifierSlot;
-import net.minecraft.component.type.ItemEnchantmentsComponent;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentLevelBasedValue;
-import net.minecraft.enchantment.Enchantments;
 import net.minecraft.enchantment.effect.value.AddEnchantmentEffect;
-import net.minecraft.item.EnchantedBookItem;
-import net.minecraft.item.ItemGroups;
-import net.minecraft.item.Items;
+import net.minecraft.item.*;
 import net.minecraft.loot.condition.EntityPropertiesLootCondition;
 import net.minecraft.loot.context.LootContext;
 import net.minecraft.predicate.entity.EntityPredicate;
@@ -21,14 +17,16 @@ import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.registry.entry.RegistryEntryList;
 import net.minecraft.registry.tag.EnchantmentTags;
 import net.minecraft.registry.tag.EntityTypeTags;
+import net.minecraft.registry.tag.TagKey;
 import net.minecraft.util.Identifier;
-import net.minecraft.item.Item;
 import net.minecraft.util.Rarity;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class HolyStrikeEnchantment {
+
+    public static final RegistryKey<Enchantment> HOLY_STRIKE = RegistryKey.of(RegistryKeys.ENCHANTMENT, Identifier.of(ZombiePlayers.MODID, "holy_strike"));
 
     public static EnchantedBookItem HOLY_STRIKE_ENCHANTMENT_LEVEL_1;
     public static EnchantedBookItem HOLY_STRIKE_ENCHANTMENT_LEVEL_2;
@@ -72,9 +70,9 @@ public class HolyStrikeEnchantment {
         // EnchantedBookItem holy_strike_5 = new EnchantedBookItem(settings);
 
         // making the books actually have the enchantment
-        enchantBookItem(holy_strike_1, 1);
-        enchantBookItem(holy_strike_2, 2);
-        enchantBookItem(holy_strike_3, 3);
+        holy_strike_1 = enchantBookItem(holy_strike_1, 1);
+        holy_strike_2 = enchantBookItem(holy_strike_2, 2);
+        holy_strike_3 = enchantBookItem(holy_strike_3, 3);
         // enchantBookItem(holy_strike_4, 4);
         // enchantBookItem(holy_strike_5, 5);
 
@@ -90,12 +88,10 @@ public class HolyStrikeEnchantment {
         return Registry.register(Registries.ITEM, Identifier.of(ZombiePlayers.MODID, name), item);
     }
 
-    private static void enchantBookItem(EnchantedBookItem item, int level) {
-
-        ItemEnchantmentsComponent component = item.getDefaultStack().getEnchantments();
-        ItemEnchantmentsComponent.Builder builder = new ItemEnchantmentsComponent.Builder(component);
-        builder.add(createEnchantment(), level);
-        builder.build(); // <------------------------------- note this may not work
+    private static EnchantedBookItem enchantBookItem(EnchantedBookItem item, int level) {
+        ItemStack itemStack = new ItemStack(item);
+        itemStack.addEnchantment(createEnchantment(), level);
+        return (EnchantedBookItem) itemStack.getItem();
     }
 
     public static RegistryEntry<Enchantment> createEnchantment() {
@@ -112,16 +108,8 @@ public class HolyStrikeEnchantment {
         // making sharpness, smite and bane of arthropods incompatible
         builder.exclusiveSet(getIncompatibleEnchantments());
 
-        Enchantment holy_strike = builder.build(Identifier.of(ZombiePlayers.MODID, "holy_strike_enchantment"));
+        Enchantment holy_strike = builder.build(Identifier.of(ZombiePlayers.MODID, "holy_strike"));
         return RegistryEntry.of(holy_strike);
-    }
-
-    private static RegistryEntryList<Enchantment> getIncompatibleEnchantments() {
-
-        RegistryEntry<Enchantment> sharpness = RegistryKeys.ENCHANTMENT.getRegistry();
-
-        // FIND ENTRY FOR ENCHANTMENTS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
     }
 
     private static Enchantment.Builder getBuilder() {
@@ -171,6 +159,18 @@ public class HolyStrikeEnchantment {
         supported_items.add(trident);
 
         return RegistryEntryList.of(supported_items);
+    }
+
+    private static RegistryEntryList<Enchantment> getIncompatibleEnchantments() {
+
+        // this tag hold sharpness, smite and bane of arthropods
+        TagKey<Enchantment> tag_key = EnchantmentTags.DAMAGE_EXCLUSIVE_SET;
+
+        // this is the registry key with all enchantments
+        RegistryKey<Registry<Enchantment>> enchantment_keys = RegistryKeys.ENCHANTMENT;
+
+        // getting the enchantments sharpness, smite and bane of arthropods from the registry key as an entry list
+        return BuiltinRegistries.createWrapperLookup().createRegistryLookup().getOrThrow(enchantment_keys).getOrThrow(tag_key);
     }
 
 }

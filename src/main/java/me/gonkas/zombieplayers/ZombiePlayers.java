@@ -13,6 +13,6 @@ public class ZombiePlayers implements ModInitializer {
 	@Override
 	public void onInitialize() {
 
-		// HolyStrikeEnchantment.registerHolyStrike();
+		HolyStrikeEnchantment.registerHolyStrike();
 	}
 }

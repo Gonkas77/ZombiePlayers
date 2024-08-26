@@ -1,14 +1,4 @@
 {
-  "mappings": {
-    "me/gonkas/zombieplayers/mixin/ZombiePlayersMixin": {
-      "bootstrap": "Lnet/minecraft/class_1893;method_60184(Lnet/minecraft/class_7891;)V"
-    }
-  },
-  "data": {
-    "named:intermediary": {
-      "me/gonkas/zombieplayers/mixin/ZombiePlayersMixin": {
-        "bootstrap": "Lnet/minecraft/class_1893;method_60184(Lnet/minecraft/class_7891;)V"
-      }
-    }
-  }
+  "mappings": {},
+  "data": {}
 }
