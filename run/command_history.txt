@@ -14,3 +14,9 @@
 /give @p minecraft:diamond_sword[minecraft:enchantments=[{"id":"holy_strike","level":1"}]]
 /give @p minecraft:diamond_sword[minecraft:enchantments={"id":"holy_strike","level":1"}]
 /give @p minecraft:diamond_sword[minecraft:enchantments={"id":"holy_strike","level":1"}]}
+/enchant @p zombieplayers:holy_strike
+/enchant @p zombieplayers:holy_strike 5
+/enchant @p zombieplayers:holy_strike 6
+/enchant @p zombieplayers:holy_strike 5
+/enchant @p zombieplayers:holy_strike 1
+/locate structure minecraft:ancient_city

@@ -1,7 +1,3 @@
 {
-  "item.zombieplayers.holy_strike_enchantment_level_1": "Enchanted Book",
-  "item.zombieplayers.holy_strike_enchantment_level_2": "Enchanted Book",
-  "item.zombieplayers.holy_strike_enchantment_level_3": "Enchanted Book",
-  "item.zombieplayers.holy_strike_enchantment_level_4": "Enchanted Book",
-  "item.zombieplayers.holy_strike_enchantment_level_5": "Enchanted Book"
+  "enchantment.zombieplayers.holy_strike": "Holy Strike"
 }
