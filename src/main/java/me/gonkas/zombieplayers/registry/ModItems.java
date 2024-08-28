@@ -6,7 +6,5 @@ public class ModItems {
 
     public static void registerItems() {
         ZombiePlayers.logRegistration("items");
-
-//        HolyStrikeEnchantment.addHolyStrikeInCreativeMenu();
     }
 }
