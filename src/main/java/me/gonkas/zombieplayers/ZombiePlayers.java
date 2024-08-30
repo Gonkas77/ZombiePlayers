@@ -1,9 +1,9 @@
 package me.gonkas.zombieplayers;
 
-import me.gonkas.zombieplayers.registry.ModEnchantments;
-import me.gonkas.zombieplayers.registry.ModEntities;
-import me.gonkas.zombieplayers.registry.ModItems;
-import me.gonkas.zombieplayers.registry.ModTags;
+import me.gonkas.zombieplayers.registry.ZombiePlayersEnchantments;
+import me.gonkas.zombieplayers.registry.ZombiePlayersEntities;
+import me.gonkas.zombieplayers.registry.ZombiePlayersItems;
+import me.gonkas.zombieplayers.registry.ZombiePlayersTags;
 import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -16,10 +16,10 @@ public class ZombiePlayers implements ModInitializer {
 	@Override
 	public void onInitialize() {
 
-		ModEntities.registerEntities();
-		ModTags.registerTags();
-		ModEnchantments.registerEnchantments();
-		ModItems.registerItems();
+		ZombiePlayersEntities.registerEntities();
+		ZombiePlayersTags.registerTags();
+		ZombiePlayersEnchantments.registerEnchantments();
+		ZombiePlayersItems.registerItems();
 	}
 
 	public static void logRegistration(String type) {

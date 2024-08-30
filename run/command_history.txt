@@ -20,3 +20,10 @@
 /enchant @p zombieplayers:holy_strike 5
 /enchant @p zombieplayers:holy_strike 1
 /locate structure minecraft:ancient_city
+/gamemode creative
+/enchant @p zombieplayers:holy_strike
+/gamemode survival
+/xp set @p 20 levels
+/gamemode creative
+/tag @s list
+/summon zombieplayers:zombified_player
