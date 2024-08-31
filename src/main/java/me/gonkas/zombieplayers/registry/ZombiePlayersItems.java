@@ -1,13 +1,16 @@
 package me.gonkas.zombieplayers.registry;
 
 import me.gonkas.zombieplayers.ZombiePlayers;
+import me.gonkas.zombieplayers.item.GlassJug;
 import me.gonkas.zombieplayers.util.ZombiePlayersComponents;
 import me.gonkas.zombieplayers.util.ZombiePlayersIdentifier;
+import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.component.DataComponentTypes;
 import net.minecraft.component.type.ItemEnchantmentsComponent;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.item.EnchantedBookItem;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemGroups;
 import net.minecraft.registry.BuiltinRegistries;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -19,8 +22,16 @@ public class ZombiePlayersItems {
 
     public static final Item HOLY_STRIKE_BOOK = register("holy_strike_book", new EnchantedBookItem(new Item.Settings().fireproof()));
 
+    public static final Item GLASS_JUG = register("glass_jug", new GlassJug(new Item.Settings()));
+    public static final Item SCULK_ENERGY = register("sculk_energy", new Item(new Item.Settings()));
+
     public static void registerItems() {
         ZombiePlayers.logRegistration("items");
+
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> {
+            entries.add(GLASS_JUG);
+            entries.add(SCULK_ENERGY);
+        });
     }
 
     private static Item register(String name, Item item) {

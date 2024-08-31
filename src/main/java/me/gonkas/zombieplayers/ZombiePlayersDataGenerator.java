@@ -3,6 +3,8 @@ package me.gonkas.zombieplayers;
 import me.gonkas.zombieplayers.data.generator.ZombiePlayersEnchantmentGenerator;
 import me.gonkas.zombieplayers.data.provider.ZombiePlayersEntityTypeTagProvider;
 import me.gonkas.zombieplayers.data.provider.ZombiePlayersItemTagProvider;
+import me.gonkas.zombieplayers.data.provider.ZombiePlayersModelProvider;
+import me.gonkas.zombieplayers.data.provider.ZombiePlayersRecipeProvider;
 import me.gonkas.zombieplayers.data.provider.lang.arabic.ZombiePlayersArabicProvider;
 import me.gonkas.zombieplayers.data.provider.lang.dutch.ZombiePlayersDutchBEProvider;
 import me.gonkas.zombieplayers.data.provider.lang.dutch.ZombiePlayersDutchNLProvider;
@@ -24,8 +26,11 @@ public class ZombiePlayersDataGenerator implements DataGeneratorEntrypoint {
 	public void onInitializeDataGenerator(FabricDataGenerator fabricDataGenerator) {
 		FabricDataGenerator.Pack pack = fabricDataGenerator.createPack();
 
+		pack.addProvider(ZombiePlayersModelProvider::new);
+		pack.addProvider(ZombiePlayersRecipeProvider::new);
 		pack.addProvider(ZombiePlayersItemTagProvider::new);
 		pack.addProvider(ZombiePlayersEntityTypeTagProvider::new);
+
 		pack.addProvider(ZombiePlayersEnchantmentGenerator::new);
 
 		// adding all lang files

@@ -1,6 +1,7 @@
 package me.gonkas.zombieplayers.data.provider.lang.portuguese;
 
 import me.gonkas.zombieplayers.registry.ZombiePlayersEnchantments;
+import me.gonkas.zombieplayers.registry.ZombiePlayersItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
 import net.minecraft.registry.RegistryWrapper;
@@ -16,5 +17,8 @@ public class ZombiePlayersPortugueseBRProvider extends FabricLanguageProvider {
     public void generateTranslations(RegistryWrapper.WrapperLookup registryLookup, TranslationBuilder translationBuilder) {
 
         translationBuilder.addEnchantment(ZombiePlayersEnchantments.HOLY_STRIKE, "Golpe Sagrado");
+
+        translationBuilder.add(ZombiePlayersItems.GLASS_JUG, "Jarro de Vidro");
+        translationBuilder.add(ZombiePlayersItems.SCULK_ENERGY, "Energia de Sculk");
     }
 }

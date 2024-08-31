@@ -1,10 +1,3 @@
-/tp @p @e[type=cow,limit=1,sort=nearest]
-/locate biome plains
-/tp @s -723 88 485
-/tp @p @e[type=cow,limit=1,sort=nearest]
-/locate structure minecraft:village_plains
-/tp @s -2368 ~ 656
-/enchant @p minecraft:unbreaking 1
 /enchant @p minecraft:sharpness 5
 /enchant @p minecraft:knockback 2
 /mods
@@ -27,3 +20,31 @@
 /gamemode creative
 /tag @s list
 /summon zombieplayers:zombified_player
+/summon minecraft:area_effect_cloud
+/execute in minecraft:the_end run tp @p 0 128 0
+/effect give @p minecraft:resistance infinite 4 true
+/gamemode survival
+/gamemode creative
+/execute in minecraft:overworld run tp @p 0 128 0
+/time set day
+/effect give @p minecraft:strength infinite 255 true
+/summon minecraft:warden
+/difficulty easy
+/gamerule doMobSpawning false
+/summon minecraft:warden
+/gamemode survival
+/give @p zombieplayers:glass_jug
+/give @p zombieplayers:glass_jug 64
+/summon minecraft:warden
+/summon zombie
+/summon minecraft:warden
+/gamemode creative
+/summon minecraft:warden
+/time set day
+/summon minecraft:warden
+/recipe give Player677 minecraft:glass_bottle
+/recipe give Player677 minecraft:bread
+/recipe give Player677 minecraft:sandstone
+/recipe give @s glass_jug
+/recipe take @s zombieplayers:glass_jug
+/summon minecraft:warden

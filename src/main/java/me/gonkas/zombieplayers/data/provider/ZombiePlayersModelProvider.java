@@ -1,9 +1,11 @@
 package me.gonkas.zombieplayers.data.provider;
 
+import me.gonkas.zombieplayers.registry.ZombiePlayersItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.data.client.BlockStateModelGenerator;
 import net.minecraft.data.client.ItemModelGenerator;
+import net.minecraft.data.client.Models;
 
 public class ZombiePlayersModelProvider extends FabricModelProvider {
     public ZombiePlayersModelProvider(FabricDataOutput output) {
@@ -18,6 +20,7 @@ public class ZombiePlayersModelProvider extends FabricModelProvider {
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
 
-        itemModelGenerator.register();
+        itemModelGenerator.register(ZombiePlayersItems.GLASS_JUG, Models.GENERATED);
+        itemModelGenerator.register(ZombiePlayersItems.SCULK_ENERGY, Models.GENERATED);
     }
 }

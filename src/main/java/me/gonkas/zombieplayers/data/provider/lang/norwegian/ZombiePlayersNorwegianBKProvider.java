@@ -1,6 +1,7 @@
 package me.gonkas.zombieplayers.data.provider.lang.norwegian;
 
 import me.gonkas.zombieplayers.registry.ZombiePlayersEnchantments;
+import me.gonkas.zombieplayers.registry.ZombiePlayersItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
 import net.minecraft.registry.RegistryWrapper;
@@ -16,5 +17,8 @@ public class ZombiePlayersNorwegianBKProvider extends FabricLanguageProvider {
     public void generateTranslations(RegistryWrapper.WrapperLookup registryLookup, TranslationBuilder translationBuilder) {
 
         translationBuilder.addEnchantment(ZombiePlayersEnchantments.HOLY_STRIKE, "Helliage Streik");
+
+        translationBuilder.add(ZombiePlayersItems.GLASS_JUG, "Glassmugge");
+        translationBuilder.add(ZombiePlayersItems.SCULK_ENERGY, "Sculke Energi");
     }
 }

@@ -8,7 +8,7 @@ forceUnicodeFont:false
 japaneseGlyphVariants:false
 fov:0.875
 fovEffectScale:0.0
-darknessEffectScale:0.0
+darknessEffectScale:1.0
 glintSpeed:0.8098591549295775
 glintStrength:1.0
 prioritizeChunkUpdates:0
