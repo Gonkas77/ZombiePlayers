@@ -1,9 +1,6 @@
 package me.gonkas.zombieplayers;
 
-import me.gonkas.zombieplayers.registry.ZombiePlayersEnchantments;
-import me.gonkas.zombieplayers.registry.ZombiePlayersEntities;
-import me.gonkas.zombieplayers.registry.ZombiePlayersItems;
-import me.gonkas.zombieplayers.registry.ZombiePlayersTags;
+import me.gonkas.zombieplayers.registry.*;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents;
 import net.minecraft.entity.AreaEffectCloudEntity;
@@ -23,10 +20,12 @@ public class ZombiePlayers implements ModInitializer {
 	@Override
 	public void onInitialize() {
 
-		ZombiePlayersEntities.registerEntities();
-		ZombiePlayersTags.registerTags();
+		ZombiePlayerBlockEntities.registerBlockEntities();
 		ZombiePlayersEnchantments.registerEnchantments();
+		ZombiePlayersEntities.registerEntities();
+		ZombiePlayersBlocks.registerBlocks();
 		ZombiePlayersItems.registerItems();
+		ZombiePlayersTags.registerTags();
 
 		ServerLivingEntityEvents.AFTER_DEATH.register((entity, damageSource) -> {
 			if (entity instanceof WardenEntity) {

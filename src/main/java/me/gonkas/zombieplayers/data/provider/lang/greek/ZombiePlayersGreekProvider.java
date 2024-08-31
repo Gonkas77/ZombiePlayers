@@ -18,6 +18,7 @@ public class ZombiePlayersGreekProvider extends FabricLanguageProvider {
 
         translationBuilder.addEnchantment(ZombiePlayersEnchantments.HOLY_STRIKE, "Ιερά Απεργία");
 
+        translationBuilder.add(ZombiePlayersItems.GILDED_VESSEL, "Επιχρυσωμένο Σκάφος");
         translationBuilder.add(ZombiePlayersItems.GLASS_JUG, "Γυάλινη Κανάτα");
         translationBuilder.add(ZombiePlayersItems.SCULK_ENERGY, "Κρυφή Ενέργεια");
     }

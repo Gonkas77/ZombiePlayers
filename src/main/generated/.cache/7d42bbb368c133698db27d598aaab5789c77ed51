@@ -1,3 +1,6 @@
-// 1.21	2024-08-31T14:05:20.4660236	ZombiePlayers/Model Definitions
+// 1.21	2024-08-31T20:09:02.1055035	ZombiePlayers/Model Definitions
+b825aff79fdf08fe701998ba56536cf1f106603a assets\zombieplayers\blockstates\synthesizer.json
+949f0e64bb844b414898cc6cd79ffd8dc893026f assets\zombieplayers\models\item\gilded_vessel.json
 340f5e48cf2daca0283b008318ee25c44516d6bb assets\zombieplayers\models\item\glass_jug.json
+eeb8902113ed70e7881f713ef7fe4573524a32d7 assets\zombieplayers\models\item\synthesizer.json
 1573bf487c6cfdf8a7334e38e5edd58246fc12bb assets\zombieplayers\models\item\sculk_energy.json

@@ -18,6 +18,7 @@ public class ZombiePlayersNorwegianBKProvider extends FabricLanguageProvider {
 
         translationBuilder.addEnchantment(ZombiePlayersEnchantments.HOLY_STRIKE, "Helliage Streik");
 
+        translationBuilder.add(ZombiePlayersItems.GILDED_VESSEL, "Forgylt Fartøy");
         translationBuilder.add(ZombiePlayersItems.GLASS_JUG, "Glassmugge");
         translationBuilder.add(ZombiePlayersItems.SCULK_ENERGY, "Sculke Energi");
     }

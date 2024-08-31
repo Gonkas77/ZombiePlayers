@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "minecraft:book"
+    },
+    "E": {
+      "item": "minecraft:emerald"
+    },
+    "G": {
+      "item": "minecraft:gold_ingot"
+    }
+  },
+  "pattern": [
+    "EGE",
+    "GBG",
+    "EGE"
+  ],
+  "result": {
+    "count": 1,
+    "id": "zombieplayers:gilded_vessel"
+  }
+}

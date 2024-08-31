@@ -22,8 +22,9 @@ public class ZombiePlayersItems {
 
     public static final Item HOLY_STRIKE_BOOK = register("holy_strike_book", new EnchantedBookItem(new Item.Settings().fireproof()));
 
+    public static final Item GILDED_VESSEL = register("gilded_vessel", new Item(new Item.Settings().rarity(Rarity.UNCOMMON)));
     public static final Item GLASS_JUG = register("glass_jug", new GlassJug(new Item.Settings()));
-    public static final Item SCULK_ENERGY = register("sculk_energy", new Item(new Item.Settings()));
+    public static final Item SCULK_ENERGY = register("sculk_energy", new Item(new Item.Settings().rarity(Rarity.UNCOMMON)));
 
     public static void registerItems() {
         ZombiePlayers.logRegistration("items");
@@ -34,7 +35,7 @@ public class ZombiePlayersItems {
         });
     }
 
-    private static Item register(String name, Item item) {
+    public static Item register(String name, Item item) {
         return Registry.register(Registries.ITEM, ZombiePlayersIdentifier.of(name), item);
     }
 

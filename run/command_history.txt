@@ -1,12 +1,3 @@
-/enchant @p minecraft:sharpness 5
-/enchant @p minecraft:knockback 2
-/mods
-/give @p zombieplayers:holy_strike_enchantment
-/give @p minecraft:diamond_sword{Echantments:[{"id":"holy_strike","level":"1"}]}
-/give @p minecraft:diamond_sword[minecraft:enchantments=
-/give @p minecraft:diamond_sword[minecraft:enchantments=[{"id":"holy_strike","level":1"}]]
-/give @p minecraft:diamond_sword[minecraft:enchantments={"id":"holy_strike","level":1"}]
-/give @p minecraft:diamond_sword[minecraft:enchantments={"id":"holy_strike","level":1"}]}
 /enchant @p zombieplayers:holy_strike
 /enchant @p zombieplayers:holy_strike 5
 /enchant @p zombieplayers:holy_strike 6
@@ -48,3 +39,12 @@
 /recipe give @s glass_jug
 /recipe take @s zombieplayers:glass_jug
 /summon minecraft:warden
+/gamemode survival
+/summon minecraft:warden
+/give @p zombieplayers:glass_jug
+/summon minecraft:warden
+/time set day
+/summon minecraft:warden
+/give @p zombieplayers:glass_jug
+/summon minecraft:warden
+/gamemode creative

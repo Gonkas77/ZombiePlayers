@@ -19,13 +19,26 @@ public class ZombiePlayersRecipeProvider extends FabricRecipeProvider {
     @Override
     public void generate(RecipeExporter exporter) {
 
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ZombiePlayersItems.GILDED_VESSEL)
+                .input('B', Items.BOOK)
+                .input('E', Items.EMERALD)
+                .input('G', Items.GOLD_INGOT)
+                .pattern("EGE")
+                .pattern("GBG")
+                .pattern("EGE")
+                .criterion(hasItem(Items.BOOK), conditionsFromItem(Items.BOOK))
+                .criterion(hasItem(Items.EMERALD), conditionsFromItem(Items.EMERALD))
+                .criterion(hasItem(Items.GOLD_INGOT), conditionsFromItem(Items.GOLD_INGOT))
+                .offerTo(exporter);
+
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ZombiePlayersItems.GLASS_JUG)
                 .input('G', Items.GLASS)
                 .input('B', Items.GLASS_BOTTLE)
                 .pattern(" G ")
                 .pattern("GBG")
                 .pattern(" G ")
-                .criterion(hasItem(ZombiePlayersItems.GLASS_JUG), conditionsFromItem(ZombiePlayersItems.GLASS_JUG))
+                .criterion(hasItem(Items.GLASS), conditionsFromItem(Items.GLASS))
+                .criterion(hasItem(Items.GLASS_BOTTLE), conditionsFromItem(Items.GLASS_BOTTLE))
                 .offerTo(exporter);
     }
 }

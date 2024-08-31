@@ -25,7 +25,7 @@ public class ZombiePlayersEntities {
                     .trackingTickInterval(2)
     );
 
-    private static <T extends Entity> EntityType<T> register(Identifier id, EntityType.Builder<T> type) {
+    public static <T extends Entity> EntityType<T> register(Identifier id, EntityType.Builder<T> type) {
         return Registry.register(Registries.ENTITY_TYPE, id, type.build(id.getPath()));
     }
 

@@ -18,6 +18,7 @@ public class ZombiePlayersSpanishUYProvider extends FabricLanguageProvider {
 
         translationBuilder.addEnchantment(ZombiePlayersEnchantments.HOLY_STRIKE, "Golpe Santo");
 
+        translationBuilder.add(ZombiePlayersItems.GILDED_VESSEL, "Recipiente Dorado");
         translationBuilder.add(ZombiePlayersItems.GLASS_JUG, "Jarra de Cristal");
         translationBuilder.add(ZombiePlayersItems.SCULK_ENERGY, "Energía de Sculk");
     }

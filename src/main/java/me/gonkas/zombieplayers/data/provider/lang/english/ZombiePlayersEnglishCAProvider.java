@@ -18,6 +18,7 @@ public class ZombiePlayersEnglishCAProvider extends FabricLanguageProvider {
 
         translationBuilder.addEnchantment(ZombiePlayersEnchantments.HOLY_STRIKE, "Holy Strike");
 
+        translationBuilder.add(ZombiePlayersItems.GILDED_VESSEL, "Gilded Vessel");
         translationBuilder.add(ZombiePlayersItems.GLASS_JUG, "Glass Jug");
         translationBuilder.add(ZombiePlayersItems.SCULK_ENERGY, "Sculk Energy");
     }

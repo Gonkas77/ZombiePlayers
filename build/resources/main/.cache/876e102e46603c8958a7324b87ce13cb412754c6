@@ -1,3 +1,5 @@
-// 1.21	2024-08-31T13:59:17.5079661	ZombiePlayers/Recipes
-5e248e9af6982bd74805f4aeb3e8d118ebd1bcbd data\zombieplayers\advancement\recipes\food\glass_jug.json
+// 1.21	2024-08-31T20:09:02.1055035	ZombiePlayers/Recipes
+3ce98332e2f01c08dd32597fc1db000193422f6d data\zombieplayers\recipe\gilded_vessel.json
+cd556f28e89f9dae7525ad8836bf070389d65d4d data\zombieplayers\advancement\recipes\misc\glass_jug.json
+1abcac4257e8bece0e921a3dd71f020cf65e6810 data\zombieplayers\advancement\recipes\misc\gilded_vessel.json
 f1e3bb45e4b7dd623a5a1f91977fbfb0ef332194 data\zombieplayers\recipe\glass_jug.json

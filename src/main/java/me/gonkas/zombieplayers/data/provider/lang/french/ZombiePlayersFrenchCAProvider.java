@@ -18,6 +18,7 @@ public class ZombiePlayersFrenchCAProvider extends FabricLanguageProvider {
 
         translationBuilder.addEnchantment(ZombiePlayersEnchantments.HOLY_STRIKE, "Frappe Sacrée");
 
+        translationBuilder.add(ZombiePlayersItems.GILDED_VESSEL, "Doreur Récipient");
         translationBuilder.add(ZombiePlayersItems.GLASS_JUG, "Cruche en Verre");
         translationBuilder.add(ZombiePlayersItems.SCULK_ENERGY, "Énergie de Sculk");
     }

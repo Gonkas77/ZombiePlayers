@@ -18,6 +18,7 @@ public class ZombiePlayersDutchNLProvider extends FabricLanguageProvider {
 
         translationBuilder.addEnchantment(ZombiePlayersEnchantments.HOLY_STRIKE, "Heilige Slag");
 
+        translationBuilder.add(ZombiePlayersItems.GILDED_VESSEL, "Verguld Vaartuig");
         translationBuilder.add(ZombiePlayersItems.GLASS_JUG, "Glazen kan");
         translationBuilder.add(ZombiePlayersItems.SCULK_ENERGY, "Sculk Energie");
     }
