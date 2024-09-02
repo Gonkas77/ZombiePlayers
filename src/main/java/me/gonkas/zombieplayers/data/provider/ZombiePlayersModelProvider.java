@@ -26,5 +26,6 @@ public class ZombiePlayersModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ZombiePlayersItems.GILDED_VESSEL, Models.GENERATED);
         itemModelGenerator.register(ZombiePlayersItems.GLASS_JUG, Models.GENERATED);
         itemModelGenerator.register(ZombiePlayersItems.SCULK_ENERGY, Models.GENERATED);
+        itemModelGenerator.register(ZombiePlayersItems.SHINING_AMALGAMATE, Models.GENERATED);
     }
 }

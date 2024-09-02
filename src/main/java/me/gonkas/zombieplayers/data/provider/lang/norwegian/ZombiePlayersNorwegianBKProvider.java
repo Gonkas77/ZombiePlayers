@@ -21,5 +21,6 @@ public class ZombiePlayersNorwegianBKProvider extends FabricLanguageProvider {
         translationBuilder.add(ZombiePlayersItems.GILDED_VESSEL, "Forgylt Fartøy");
         translationBuilder.add(ZombiePlayersItems.GLASS_JUG, "Glassmugge");
         translationBuilder.add(ZombiePlayersItems.SCULK_ENERGY, "Sculke Energi");
+        translationBuilder.add(ZombiePlayersItems.SHINING_AMALGAMATE, "Skinnende Klyngje");
     }
 }

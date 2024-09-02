@@ -25,6 +25,7 @@ public class ZombiePlayersItems {
     public static final Item GILDED_VESSEL = register("gilded_vessel", new Item(new Item.Settings().rarity(Rarity.UNCOMMON)));
     public static final Item GLASS_JUG = register("glass_jug", new GlassJug(new Item.Settings()));
     public static final Item SCULK_ENERGY = register("sculk_energy", new Item(new Item.Settings().rarity(Rarity.UNCOMMON)));
+    public static final Item SHINING_AMALGAMATE = register("shining_amalgamate", new Item(new Item.Settings().rarity(Rarity.RARE)));
 
     public static void registerItems() {
         ZombiePlayers.logRegistration("items");
@@ -32,6 +33,8 @@ public class ZombiePlayersItems {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> {
             entries.add(GLASS_JUG);
             entries.add(SCULK_ENERGY);
+            entries.add(GILDED_VESSEL);
+            entries.add(SHINING_AMALGAMATE);
         });
     }
 
